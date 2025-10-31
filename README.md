@@ -56,44 +56,21 @@ HighDelite/
 - MongoDB
 - npm or yarn
 
-### Installation
+## Installation
 
-1. Clone the repository:
-\`\`\`bash
-git clone <repository-url>
-\`\`\`
+1. Clone the repository: ```bash git clone https://github.com/ChiragChaudhari0608/Travel-app-Highway-Delite-assess.git```
 
-2. Install frontend dependencies:
-\`\`\`bash
-cd frontend
-npm install
-\`\`\`
+2. Install frontend dependencies: ```bash cd frontend npm install```
 
-3. Install backend dependencies:
-\`\`\`bash
-cd backend
-npm install
-\`\`\`
+3. Install backend dependencies: ```bash cd backend npm install```
 
-4. Create a .env file in the backend directory:
-\`\`\`env
-MONGODB_URI=your_mongodb_connection_string
-PORT=5000
-\`\`\`
+4. Create a .env file in the backend directory: ```env MONGODB_URI=your_mongodb_connection_string PORT=5000```
 
-### Running the Application
+## Running the Application
 
-1. Start the backend server:
-\`\`\`bash
-cd backend
-npm start
-\`\`\`
+1. Start the backend server: ```bash cd backend npm start```
 
-2. Start the frontend development server:
-\`\`\`bash
-cd frontend
-npm run dev
-\`\`\`
+2. Start the frontend development server: ```bash cd frontend npm run dev```
 
 The application will be available at `http://localhost:5173`
 
