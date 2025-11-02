@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import { api } from '../services/api';
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -33,7 +34,7 @@ const DetailsPage = () => {
     const fetchExperience = async () => {
       try {
         setError(null);
-        const response = await axios.get(`http://localhost:5000/api/experiences/${id}`);
+        const response = await api.getExperienceById(id);
         setExperience(response.data);
       } catch (err) {
         console.error('Error fetching experience:', err);

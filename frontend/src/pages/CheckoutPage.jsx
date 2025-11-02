@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import { api } from '../services/api';
 
 const CheckoutPage = () => {
   const location = useLocation();
@@ -32,9 +33,7 @@ const CheckoutPage = () => {
     if (!formData.promoCode) return;
     
     try {
-      const response = await axios.post('http://localhost:5000/api/promo/validate', {
-        promoCode: formData.promoCode
-      });
+      const response = await api.validatePromoCode(formData.promoCode);
       setPromoStatus(response.data);
     } catch (error) {
       console.error('Error validating promo code:', error);
@@ -75,7 +74,7 @@ const CheckoutPage = () => {
       };
       console.log('Sending booking request:', payload);
       
-      const response = await axios.post('http://localhost:5000/api/bookings', payload);
+      const response = await api.createBooking(payload);
 
       navigate('/booking-confirmed', { 
         state: { 
